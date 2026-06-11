@@ -1,0 +1,27 @@
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-wrap {
+  background: #EEF3FF;
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 1px solid #dde4f5;
+  border-bottom: 1px solid #dde4f5;
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-dark);
+  white-space: nowrap;
+  padding: 0 8px;
+}
+.marquee-item strong { font-weight: 700; }
+.marquee-dot { margin-left: 16px; color: #aaa; font-size: 18px; }

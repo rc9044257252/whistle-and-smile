@@ -1,0 +1,91 @@
+.clinic { padding: 32px 0; background: white; }
+.clinic__card {
+  background: #EEF3FF;
+  border-radius: 16px;
+  padding: 36px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.clinic__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.4;
+  max-width: 560px;
+}
+.clinic__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.clinic__logo-box {
+  background: #7B3F00;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+.clinic__logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+}
+.clinic__logo-smile { color: #FFD700; }
+.clinic__logo-sub {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+}
+.clinic__find-wrap { position: relative; }
+.clinic__find-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--purple);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 4px 0;
+}
+.clinic__find-btn:hover { opacity: 0.8; }
+.clinic__dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-card);
+  z-index: 100;
+  overflow: hidden;
+  min-width: 160px;
+}
+.clinic__city {
+  display: block;
+  width: 100%;
+  padding: 11px 18px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.clinic__city:last-child { border-bottom: none; }
+.clinic__city:hover { background: var(--purple-pale); color: var(--purple); }
+
+@media (max-width: 768px) {
+  .clinic__card { flex-direction: column; padding: 24px 20px; align-items: flex-start; }
+  .clinic__title { font-size: 18px; }
+  .clinic__right { width: 100%; flex-direction: row; justify-content: space-between; }
+}

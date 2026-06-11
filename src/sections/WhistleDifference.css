@@ -1,0 +1,50 @@
+.diff { background: #EEF3FF; overflow: hidden; }
+.diff__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.diff__left {
+  padding: 64px 56px 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.diff__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+.diff__features { display: flex; flex-direction: column; gap: 32px; }
+.diff__feature { display: flex; gap: 20px; align-items: flex-start; }
+.diff__feature-icon { flex-shrink: 0; }
+.diff__feature-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.diff__feature-desc {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+.diff__right { position: relative; overflow: hidden; }
+.diff__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .diff__inner { grid-template-columns: 1fr; }
+  .diff__right { height: 280px; }
+  .diff__left { padding: 40px 20px; }
+  .diff__title { font-size: 26px; }
+}

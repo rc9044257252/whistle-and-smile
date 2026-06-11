@@ -1,0 +1,94 @@
+.smilers { padding: 72px 0; background: white; }
+.smilers__title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+.smilers__scroll-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.smilers__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 12px 4px 20px;
+  flex: 1;
+}
+.smilers__track::-webkit-scrollbar { display: none; }
+.smilers__card {
+  flex-shrink: 0;
+  width: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #8B5CF6;
+  scroll-snap-align: start;
+  transition: transform 0.2s;
+  position: relative;
+}
+.smilers__card:hover { transform: translateY(-4px); }
+.smilers__card--center {
+  width: 240px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.35);
+}
+.smilers__card-header {
+  padding: 10px 14px 0;
+}
+.smilers__whistle-logo {}
+.smilers__img-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+.smilers__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) brightness(0.85);
+}
+.smilers__quote-icon {
+  position: absolute;
+  bottom: 8px; left: 12px;
+  font-size: 28px;
+  color: white;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.9;
+}
+.smilers__card-bottom {
+  background: white;
+  padding: 10px 14px;
+}
+.smilers__name {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+.smilers__person {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.smilers__arrow {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-dark);
+  transition: background 0.15s, border-color 0.15s;
+  z-index: 2;
+}
+.smilers__arrow:hover { background: var(--purple-pale); border-color: var(--purple); color: var(--purple); }
+
+@media (max-width: 600px) {
+  .smilers__title { font-size: 26px; }
+  .smilers__arrow { display: none; }
+}

@@ -1,0 +1,99 @@
+.ct { padding: 72px 0; background: white; }
+.ct__title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 48px;
+  letter-spacing: -0.5px;
+}
+.ct__table {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ct__header {
+  display: grid;
+  grid-template-columns: 1fr 220px 220px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+.ct__col {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.ct__col--feature { flex: 1; }
+.ct__col--whistle {
+  justify-content: center;
+  border-left: 1px solid var(--border);
+  text-align: center;
+}
+.ct__col--others {
+  justify-content: center;
+  border-left: 1px solid var(--border);
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+.ct__col--bg { background: #EEF3FF; }
+.ct__brand-logo { text-align: center; }
+
+.ct__row-wrap { border-top: 1px solid var(--border); }
+.ct__row {
+  display: grid;
+  grid-template-columns: 1fr 220px 220px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.ct__row:hover { background: #FAFAFA; }
+.ct__row--open { background: #FAFAFA; }
+
+.ct__col--feature.ct__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ct__feature-name { font-size: 15px; font-weight: 500; color: var(--text-dark); }
+.ct__chevron {
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.ct__chevron--up { transform: rotate(180deg); }
+
+.ct__check {
+  width: 28px; height: 28px;
+  background: var(--green-tick);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ct__cross {
+  width: 28px; height: 28px;
+  background: var(--red-cross);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.ct__val { font-size: 14px; font-weight: 500; color: var(--text-dark); text-align: center; line-height: 1.4; }
+
+.ct__detail {
+  background: #F8F4FF;
+  border-top: 1px solid #E8DAFF;
+  padding: 16px 24px;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .ct__header, .ct__row { grid-template-columns: 1fr 130px 130px; }
+  .ct__col { padding: 16px 12px; }
+  .ct__feature-name { font-size: 13px; }
+  .ct__title { font-size: 24px; }
+}
